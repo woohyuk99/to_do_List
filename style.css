@@ -41,4 +41,11 @@ body{
     display: flex;
     justify-content: space-between;
     padding: 1em;
+    
+}
+
+.task-done{
+    text-decoration: line-through;
+    color: black;
+    background-color: gray;
 }
