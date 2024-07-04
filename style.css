@@ -15,6 +15,8 @@ body{
     display: flex;
     border-bottom: 1px solid lightgray;
     position: relative;
+    gap: 10px;
+    padding-bottom: 5px;
 }
 
 
@@ -28,12 +30,14 @@ body{
 
 #under-line{
     height: 4px;
-    background-color: pink;
+    background-color: red;
     position: absolute;
-    width: 50px;
+    min-width: 54px;
+    bottom: 0px;
     left: 0px;
     top: 50px;
     padding: 0px;
+    transition: all 0.3s;
 
 }
 
@@ -48,4 +52,8 @@ body{
     text-decoration: line-through;
     color: black;
     background-color: gray;
+}
+
+.task-tabs div{
+    cursor: pointer
 }
