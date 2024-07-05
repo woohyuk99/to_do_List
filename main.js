@@ -15,6 +15,9 @@ let tabs = document.querySelectorAll(".task-tabs div")
 let taskList = [];
 let filterList = [];
 let mode = 'all'
+let a = document.getElementById("under-line")
+let b = document.querySelectorAll(".task-tabs div") // querySelectorAll : 조건에 맞는 모든 것을 가져온다
+
 
 addButton.addEventListener("click", addTask);
 addButton.disabled = true
@@ -112,10 +115,18 @@ function deleteTask(id){
     }
     render()
   }
-  
+
+// Mission 5, 6: 탭 상태에 따른 이동 및 삭제 시 UI에 적용
 function filter(event){
-  mode = event.target.id
+  if(event) {
+    mode = event.target.id
+    a.style.width = event.target.offsetWidth + "px"
+    a.style.left = event.target.offsetLeft + "px"
+    a.style.top = event.target.offsetTop + event.target.offsetHeight + "px"
+  }
+  
   filterList = []
+
   if(mode == "all"){
     // 전체 리스트를 보여준다
     render()
@@ -146,6 +157,7 @@ function filter(event){
 function randomIDGenerate() {
   return "_" + Math.random().toString(36).substr(2, 9);
 }
+
 
 
 
